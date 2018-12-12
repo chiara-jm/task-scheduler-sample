@@ -11,5 +11,3 @@ The <b>Domain Layer</b> classes are inspired by the principles of [Clean Archite
 The <b>Presentation Layer</b> implements the MVP-VM pattern that is an evolution of the [MVP Pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter) by adding a ViewModel to extract the responsibility of binding model to view and gathering the input data to deliver it back to the presenter whenever it is needed.
 
 The Data Layer is not intended to be covered on this example and you could use whatever architecture fit you the best. For this basic example I used a simple in memory repository that has the ability to deliver updates through java RX.
-
-<center><img src="https://docs.google.com/drawings/d/1A7DvbeFjh9_8HdyMC0TdzDaLtk8Bp9JoV8exCg8f7EQ" alt="Diagram"/></center>
