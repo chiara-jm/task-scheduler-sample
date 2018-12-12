@@ -12,4 +12,4 @@ The <b>Presentation Layer</b> implements the MVP-VM pattern that is an evolution
 
 The Data Layer is not intended to be covered on this example and you could use whatever architecture fit you the best. For this basic example I used a simple in memory repository that has the ability to deliver updates through java RX.
 
-<center><img src="https://goo.gl/H0l4Kh" alt="Diagram"/></center>
+<center><img src="https://docs.google.com/drawings/d/1A7DvbeFjh9_8HdyMC0TdzDaLtk8Bp9JoV8exCg8f7EQ" alt="Diagram"/></center>
