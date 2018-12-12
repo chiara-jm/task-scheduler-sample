@@ -1,0 +1,13 @@
+<resources>
+    <string name="task_action_start">START</string>
+    <string name="task_action_pause">PAUSE</string>
+    <string name="task_action_finish">FINISH</string>
+    <string name="task_action_archive">ARCHIVE</string>
+    <string name="task_action_reschedule">RE-SCHEDULE</string>
+    <string name="task_action_restart">RE-START</string>
+    <string name="task_action_unarchive">UNARCHIVE</string>
+    <string name="task_action_delete">DELETE</string>
+    <string name="hint_task_what">WHAT TO DO</string>
+    <string name="task_create_save">SAVE</string>
+
+</resources>

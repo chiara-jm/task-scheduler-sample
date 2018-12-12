@@ -1,0 +1,26 @@
+@startuml
+
+class TaskDetailViewModel<< (P,#ff00ff) Presentation >>
+class TaskDetailPresenter<< (P,#ff00ff) Presentation >>
+class TaskDetailView<< (P,#ff00ff) Presentation >>
+
+class Context<< (A,#00FF00) Activity >>
+
+class Navigation<< (S,#55aaff) App >>
+class UseCaseExecutor<< (S,#55aaff) App >>
+class DataSource<< (S,#55aaff) App >>
+
+hide members
+
+TaskDetailView ..> TaskDetailPresenter
+TaskDetailView ..> TaskDetailViewModel
+
+TaskDetailViewModel ..> Context
+
+TaskDetailPresenter ..> TaskDetailViewModel
+TaskDetailPresenter ..> Navigation
+TaskDetailPresenter ..> UseCaseExecutor
+TaskDetailPresenter ..> DataSource
+TaskDetailPresenter ..> TaskId
+
+@enduml

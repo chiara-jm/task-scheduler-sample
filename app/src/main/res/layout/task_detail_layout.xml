@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="chiarajm.android.base.sample.presentation.detail.TaskDetailContract.ViewModel"/>
+
+        <variable
+            name="presenter"
+            type="chiarajm.android.base.sample.presentation.detail.TaskDetailContract.Presenter"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/task_detail_what"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:text='@{viewModel.what}'/>
+
+            <TextView
+                android:id="@+id/task_detail_when"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:text='@{viewModel.time}'/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/task_detail_move_back"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick='@{() -> presenter.onMoveBackClicked()}'
+                    android:text='@{viewModel.moveBackAction}'/>
+
+                <Button
+                    android:id="@+id/task_detail_move_forward"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick='@{() -> presenter.onMoveForwardClicked()}'
+                    android:text='@{viewModel.moveForwardAction}'/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

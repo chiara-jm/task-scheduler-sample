@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="chiarajm.android.base.sample.presentation.utils.recyclerview.SingleTextRowViewModel"/>
+
+        <variable
+            name="presenter"
+            type="chiarajm.android.base.sample.presentation.utils.recyclerview.RecyclerViewRowContract.Presenter"/>
+    </data>
+
+    <TextView
+        android:id="@+id/row_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:onClick="@{() -> presenter.performPrimaryAction()}"
+        android:onLongClick="@{() -> presenter.performLongClick()}"
+        android:paddingEnd="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingStart="16dp"
+        android:text="@{viewModel.text}"/>
+
+</layout>

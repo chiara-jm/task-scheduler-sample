@@ -1,0 +1,25 @@
+@startuml
+
+class TaskCreateViewModel<< (P,#ff00ff) Presentation >>
+class TaskCreatePresenter<< (P,#ff00ff) Presentation >>
+class TaskCreateView<< (P,#ff00ff) Presentation >>
+
+class Context<< (A,#00FF00) Activity >>
+
+class Navigation<< (S,#55aaff) App >>
+class UseCaseExecutor<< (S,#55aaff) App >>
+class DataSource<< (S,#55aaff) App >>
+
+hide members
+
+TaskCreateViewModel ..> Context
+
+TaskCreatePresenter ..> TaskCreateViewModel
+TaskCreatePresenter ..> Navigation
+TaskCreatePresenter ..> UseCaseExecutor
+TaskCreatePresenter ..> DataSource
+
+TaskCreateView ..> TaskCreatePresenter
+TaskCreateView ..> TaskCreateViewModel
+
+@enduml

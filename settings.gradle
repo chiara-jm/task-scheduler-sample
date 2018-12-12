@@ -1,0 +1,1 @@
+include ':app', ':base-dagger', ':base-mvp-vm', ':kotlin-extensions'

@@ -1,0 +1,87 @@
+
+buildscript {
+    ext.kotlin_version = '1.3.10'
+    repositories {
+        jcenter()
+        google()
+        mavenCentral()
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.gms:google-services:4.0.1'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+        mavenCentral()
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+    }
+
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xmaxerrs" << "1000"
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+// Define versions in a single place
+ext {
+    // Sdk and tools
+    minSdk = 23
+    targetSdk = 28
+    compileSdk = 28
+    buildTools = '28.0.3'
+
+    // App dependencies
+    supportLibrary = '28.0.0'
+
+
+    constraintLibrary = '1.1.3'
+    flexbox = '1.0.0'
+
+    coroutines = '1.0.1'
+
+    appauth = '0.7.1'
+
+    room = '1.1.1'
+
+    rx2java = '2.1.14'
+    rx2android = '2.0.2'
+    rx2kotlin = '2.2.0'
+
+    dagger = '2.18'
+    timber = '4.7.1'
+
+    firebaseCore = '16.0.6'
+
+    okhttp = '3.8.1'
+    retrofit = '2.4.0'
+//    picasso = '3.0.0-SNAPSHOT'
+    picasso = '2.71828'
+    moshi = '1.8.0'
+
+    playServicesPlaces = '16.0.0'
+    libPhoneNumber = '8.9.16'
+
+    // Test libraries
+    espresso = '3.0.2'
+    robolectric = '4.0-alpha-2'
+    junit = '4.12'
+    mockito = '2.19.0'
+    kluent = '1.38'
+}
+
+def getProps(path) {
+    Properties props = new Properties()
+    props.load(new FileInputStream(file(path)))
+    return props
+}
